@@ -1,3 +1,7 @@
+/* MAIN.SCSS */
+
+@include "normalize";
+
 /* VARIABLES */
 $bkgd-color: #FCFAF5;
 $font-color: #4A4A4A;
@@ -23,7 +27,7 @@ body {
   padding: 25px / 974px * 100%;
   padding-bottom: 0;
   width: 974px / 1024px * 100%;
-  height: 710px / 763px * 100%; 
+  height: 710px / 763px * 100%;
   font-size: 100%;
 }
 
@@ -44,7 +48,7 @@ h2 {
   color: rgba(0,0,0,.02);
   position: relative;
   font-size: 204px / 16px * 1em;
-  top: 41px / 120px * 100%; 
+  top: 41px / 120px * 100%;
   text-align: center;
   margin: 0 auto;
 }
@@ -63,7 +67,7 @@ h4 {
 
 h6 {
   font-size: 54px / 16px * 100%;
-  font-style: italic; 
+  font-style: italic;
   color: #919191;
   word-wrap: normal;
 }
@@ -79,12 +83,12 @@ a {
 
   :hover {
     text-decoration: underline;
-    color: darker(hsl(0,0,0.57)) 0.1; 
+    color: darker(hsl(0,0,0.57)) 0.1;
   }
 }
 
 button {
-  background-color: $bkgd-color; 
+  background-color: $bkgd-color;
   border: 1px solid $btn-outline;
   border-radius: 6px;
   width: 283px / 658px * 100%; // context = <main> ; double check!
@@ -120,7 +124,7 @@ nav {
     text-align: justify;
     min-width: 941px / 984px * 100%;
     margin: 0 21px / 984px * 100%;
-  
+
     li {
       display: inline-block;
       text-align: center;
@@ -254,7 +258,7 @@ nav {
     text-align: justify;
     width: 336px / 504px * 100%;
     height: 60px / 504px * 100%;
-    
+
     li {
       display: inline-block;
       width: 46px / 336px * 100%;
@@ -279,14 +283,14 @@ nav {
     content: '';
     width: 100%;
     display: inline-block;
-  } 
+  }
 }
 
 
 /* Submit Modal */
 .js-submit-modal__content {
   padding: (39px / 502px * 100%) 0;
-  
+
   h4 {
     text-align: left;
     margin-bottom: 15px; // make responsive
@@ -325,8 +329,8 @@ nav {
     height: 405px / 465px * 100%;
     width: 524px / 642px * 100%;
     margin: 0 auto;
-    padding: 0 (20px / 524px * 100%); 
-  
+    padding: 0 (20px / 524px * 100%);
+
     /* width of quotes should be on blockquote not reasons */
     blockquote {
       @extend p;
@@ -406,19 +410,19 @@ main {
 }
 
 
-/* Result Page */ 
+/* Result Page */
 .pg-result {
   display: none; // temp
 }
 
 .result {
   margin-bottom: 37px / 658px * 100%;
-  padding-top: 17.188034%; 
+  padding-top: 17.188034%;
 }
 
 .continue {
-  margin-top: 54px / 658px * 100%; 
-  margin-bottom: 25px / 566px * 100%; 
+  margin-top: 54px / 658px * 100%;
+  margin-bottom: 25px / 566px * 100%;
 }
 
 
@@ -429,12 +433,12 @@ footer {
   position: absolute;
   bottom: 0;
   text-align: center;
-  line-height: 750%; 
+  line-height: 750%;
   white-space: nowrap;
   overflow: hidden;
 
   p {
-    color: #919191; 
+    color: #919191;
     position: relative;
     bottom: 26px / 120px * 100%;
     text-align: left;
