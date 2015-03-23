@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>White Lies</title>
+    <!-- <base target="_self" href="http://www.whitelies.com/"> -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="author" content="Amira Hailemariam">
+    <meta name="description" content="What is a white lie? You decide.">
+    <meta name="keywords" content="lie, white lie, truth, omission">
+    <link rel="stylesheet" type="css" href="reset.css">
+    <link rel="stylesheet" type="css" href="main.css">
+    <!-- HTML5 SHIV -->
+    <!-- [if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif] -->
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <nav>
+        <ul>
+          <li id="modal-def"><a href="#">What's a White Lie?</a></li>
+          <li id="modal-submit"><a href="#">Submit a White Lie</a></li>
+          <li id="js-feedback"><a href="#">Feedback</a></li>
+        </ul>
+      </nav>
+
+      </div>
+
+      <main>
+        <!-- Welcome Page -->
+        <div class="pg-home">
+          <h5>White Lies</h5>
+        </div>
+
+        <!-- Lie Page -->
+        <div class="pg-lie" id="pg-lie">
+          <div class="lie">
+            <h6>How many character is this? You tell me. Maybe too many. Maybe not enough. just a little bit more then? A ha, okay. Gotcha. Just a b</h6>
+          </div>
+          <div class="choose">
+            <button class="btn-white-lie" id="btn-white-lie" name="white-lie">White Lie</button>
+            <button class="btn-lie" id="btn-lie" name="lie">Lie</button>
+          </div>
+        </div>
+
+        <!-- Result Page -->
+        <div class="pg-result" id="pg-result">
+          <div class="result">
+            <h1 class="counter" id="count">0</h1>
+            <h3>agree it's a lie</h3>
+          </div>
+          
+          <p id="modal-false"><a href="#">Read why.</a></p>
+
+          <button class="continue" name="continue">Continue?</button>
+
+          <p class="modal-true" id="modal-true"><a href="#">Or read why it isn't &hellip;</a></p>
+        </div>
+      </main>
+
+      <footer>
+        <h2>White Lies</h2>
+        <p>Copyright &copy; 2015 | <a href="https://twitter.com/amirahaile">@amirahaile</a>
+      </footer>
+    </div>
+
+
+    <!-- MODALS -->
+
+    <!-- What's a White Lie? -->
+    <div class="js-modal" id="modal-container">
+      <section class="js-modal__box">
+        <div class="js-modal__close" id="modal-hide">x</div>
+
+        <div class="js-lie-modal__content">
+          <div class="js-lie-modal__content__def">
+            <h4>An untruth, especially one uttered in the interests of tact or politeness; to spare feelings.</h4>
+          </div>
+          <hr>
+          <div class="js-lie-modal__content__story">
+            <p>On a call with my friend during our commute home, we got to talking about white lies. We both agreed white lies were harmless but found it difficult to agree on an ideal example.</p>
+            <p>So now, I ask you: what is a white lie?</p>
+          </div>
+          <ul class="js-lie-modal__content__soc-media">
+            <li><a href="#"><img src="images/twitter.png"></a></li>
+            <li><a href="#"><img src="images/tumblr.png"></a></li>
+            <li><a href="#"><img src="images/facebook.png"></a></li>
+            <li><a href="#"><img src="images/google.png"></a></li>
+          </ul>
+        </div>
+
+      </section>
+    </div>
+
+    <!-- Submit a White Lie -->
+    <!-- JS needs renaming -->
+    <div class="js-modal" id="modal-container-3">
+      <section class="js-modal__box">
+        <div class="js-modal__close" id="modal-hide-3">x</div>
+
+        <div class="js-submit-modal__content">
+          <h4>Not sure if you're lying…?</h4>
+          <form method="post" target="_parent" class="js-submit-modal__form">
+            <textarea cols="80" rows="8" maxlength="150" minlength="1" class="submit-lie__field" id="submit-lie__field" onkeyup="countChar(this)">Write your lie here and we'll see what the jury has to say.</textarea>
+            <p><span id="js-submit-modal__form__count">0</span>/150</p>
+            <br>
+            <button class="js-submit-modal__form__btn-submit" name="submit">Submit</button>
+          </form>
+        </div>
+
+      </section>
+    </div>
+
+    <!-- Feedback -->
+    <div class="js-modal" id="js-feedback-modal">
+      <section class="js-modal__box">
+        <div class="js-modal__close" id="modal-hide-4">x</div>
+
+        <div class="js-feedback-modal__content">
+          <h4>Comments, critiques, suggestions?<br>
+          Reply me <a href="#">@amirahaile</a> or<br>
+          submit a pull request via <a href="#">GitHub</a>.</h4>
+        </div>
+
+      </section>
+    </div>
+
+    <!-- Is there a programming solution to consolidating these modals? -->
+    <!-- False explanations -->
+    <div class="js-modal" id="modal-container-2">
+      <section class="js-reasons-modal__box">
+        <div class="js-modal__close" id="modal-hide-2">x</div>
+
+        <div class="js-reasons-modal__content">
+          <h4>It's a lie because…</h4>
+          <div class="reasons">
+            <blockquote>“She’s gonna believe you and buy more of those outfits. She’ll wrongfully think they’re flattering and it’ll be a waste of her money!”</blockquote>
+            <blockquote>“She’s gonna believe you and buy more of those outfits. She’ll wrongfully think they’re flattering and it’ll be a waste of her money!”</blockquote>
+            <blockquote>“She’s gonna believe you and buy more of those outfits. She’ll wrongfully think they’re flattering and it’ll be a waste of her money!”</blockquote>
+            <blockquote>“She’s gonna believe you and buy more of those outfits. She’ll wrongfully think they’re flattering and it’ll be a waste of her money!”</blockquote>
+            <blockquote>“She’s gonna believe you and buy more of those outfits. She’ll wrongfully think they’re flattering and it’ll be a waste of her money!”</blockquote>
+          </div>
+        </div>
+
+    <!-- True explanations -->
+    <div class="js-modal" id="modal-container-2">
+      <section class="js-reasons-modal__box">
+        <div class="js-modal__close" id="modal-hide-2">x</div>
+
+        <div class="js-reasons-modal__content">
+          <h4>It's not a lie because…</h4>
+          <div class="reasons">
+            <blockquote>“She’s gonna believe you and buy more of those outfits. She’ll wrongfully think they’re flattering and it’ll be a waste of her money!”</blockquote>
+            <blockquote>“She’s gonna believe you and buy more of those outfits. She’ll wrongfully think they’re flattering and it’ll be a waste of her money!”</blockquote>
+            <blockquote>“She’s gonna believe you and buy more of those outfits. She’ll wrongfully think they’re flattering and it’ll be a waste of her money!”</blockquote>
+          </div>
+        </div>
+
+      </section>
+    </div>
+
+    <!-- SCRIPTS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script type="text/javascript" src="js/effects.js"></script>
+  </body>
+</html>

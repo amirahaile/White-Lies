@@ -1,0 +1,442 @@
+/* VARIABLES */
+$bkgd-color: #FCFAF5;
+$font-color: #4A4A4A;
+$btn-outline: #D8D8D8;
+$btn-text: #979797;
+$modal-bkgd: #F5F4F0;
+
+$font-stack: "Gentium", serif;
+
+/* BASICS */
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: $bkgd-color;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  padding: 25px / 974px * 100%;
+  padding-bottom: 0;
+  width: 974px / 1024px * 100%;
+  height: 710px / 763px * 100%; 
+  font-size: 100%;
+}
+
+h1, h2, h3, h4, h6, p, blockquote, .modal-hide {
+  font-family: $font-stack;
+  color: $font-color;
+}
+
+/* results */
+h1 {
+  font-size: 156px / 16px * 1em;
+  font-style: italic;
+}
+
+/* white lies */
+/* placement styling should be on footer not h2 */
+h2 {
+  color: rgba(0,0,0,.02);
+  position: relative;
+  font-size: 204px / 16px * 1em;
+  top: 41px / 120px * 100%; 
+  text-align: center;
+  margin: 0 auto;
+}
+
+/* agree */
+h3 {
+  font-size: 54px / 16px * 1em;
+  font-style: italic;
+}
+
+/* definition */
+h4 {
+  font-size: 26px / 16px * 1em;
+  text-align: center;
+}
+
+h6 {
+  font-size: 54px / 16px * 100%;
+  font-style: italic; 
+  color: #919191;
+  word-wrap: normal;
+}
+
+p {
+  font-size: 1em;
+  line-height: 1;
+}
+
+a {
+  text-decoration: none;
+  color: hsl(0,0,0.57);
+
+  :hover {
+    text-decoration: underline;
+    color: darker(hsl(0,0,0.57)) 0.1; 
+  }
+}
+
+button {
+  background-color: $bkgd-color; 
+  border: 1px solid $btn-outline;
+  border-radius: 6px;
+  width: 283px / 658px * 100%; // context = <main> ; double check!
+  height: 70px;
+  font-family: $font-stack;
+  font-size: 37px / 16px * 1em;
+  color: $btn-text;
+  text-transform: uppercase;
+  box-shadow: 0 1px 1px 0 rgba(0,0,0,.2);
+}
+/* NAVIGATION */
+
+nav {
+  width: 984px / 1024px * 100%;
+  height: 47px / 763px * 100%;
+  margin: (13px / 984px * 100%) (20px / 984px * 100%) 0 (20px / 984px * 100%);
+
+  a {
+    text-decoration: none;
+    color: #4A4A4A;
+
+    &:hover {
+      text-decoration: none;
+      border-bottom: 1px solid #D8D8D8;
+      padding: 1px 0px;
+    }
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: justify;
+    min-width: 941px / 984px * 100%;
+    margin: 0 21px / 984px * 100%;
+  
+    li {
+      display: inline-block;
+      text-align: center;
+      width: 145px / 941px * 100%;
+    }
+
+    li:first-child {
+      text-align: left;
+    }
+
+    li:last-child {
+      text-align: right;
+    }
+  }
+
+  ul:after {
+    content: '';
+    width: 100%;
+    display: inline-block;
+  }
+}
+
+
+/* MODALS */
+
+.js-modal {
+  background-color: rgba(0,0,0,0.3); // find a better color than black
+  height: 100%;
+  width: 100%;
+  left: 0px;
+  top: 0px;
+  position: fixed;
+  display: none;
+  z-index: 100;
+}
+
+.js-modal__box {
+  width: 502px / 1024px * 100%;
+  // height: 465px / 763px * 100%;
+  padding: 20px / 502px * 100%;
+  background-color: $modal-bkgd;
+  margin: 0 auto;
+  border-radius: 2px;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.js-modal__close { // how can this be made into an inline element w block properties; js trigger w span?
+  text-align: right;
+  position: relative;
+  background: none;
+  border: none;
+  margin: (-50px / 733px * 100%) (-52px / 984px * 100%) 0 0;
+  font-size: 25px / 16px * 1em;
+}
+
+.js-modal__content {
+  width: 803px / 984px * 100%;
+  height: 337px / 733px * 100%;
+  margin: 0 auto;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+
+  hr {
+    width: 158px / 524px * 100%;
+    margin-top: 47px / 337px * 100%;
+    margin-bottom: 53px / 337px * 100%;
+  }
+
+  p {
+    width: 336px / 524px * 100%;
+    margin: 0 auto;
+    font-size: 14px / 16px * 1em;
+  }
+
+}
+
+.js-reasons-modal__box {
+  width: 526px / 1024px * 100%;
+  height: 626px / 763px * 100%;
+  background-color: $modal-bkgd;
+  margin: 0 auto;
+  border-radius: 2px;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+
+.js-reasons-modal__content {
+  width: 800px / 984px * 100%;
+  height: 349px / 465px * 100%;
+  margin: 0 auto;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+
+  h4 {
+      margin-bottom: 32px / 465px * 100%;
+    }
+}
+
+/* Whats A Lie Modal */
+.js-lie-modal__content {
+  width: 504px / 502px * 100%;
+
+  .js-lie-modal__content__def {
+    width: 504px / 504px * 100%;
+    margin: 32px 0; // make responsive
+  }
+
+  hr {
+    width: 175px / 504px * 100%;
+  }
+
+  .js-lie-modal__content__story {
+    width: 304px / 504px * 100%;
+    margin: 32px auto 0 auto; // make responsive
+
+    p {
+      margin-bottom: 10px;
+    }
+  }
+
+  ul {
+    list-style: none;
+    margin: (41px / 504px * 100%) auto 0 auto;
+    padding: 0;
+    text-align: justify;
+    width: 336px / 504px * 100%;
+    height: 60px / 504px * 100%;
+    
+    li {
+      display: inline-block;
+      width: 46px / 336px * 100%;
+      height: 46px / 60px * 100%;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    li:first-child {
+      text-align: left;
+    }
+
+    li:last-child {
+      text-align: right;
+    }
+  }
+
+  ul:after {
+    content: '';
+    width: 100%;
+    display: inline-block;
+  } 
+}
+
+
+/* Submit Modal */
+.js-submit-modal__content {
+  padding: (39px / 502px * 100%) 0;
+  
+  h4 {
+    text-align: left;
+    margin-bottom: 15px; // make responsive
+    text-style: italic;
+  }
+}
+
+.js-submit-modal__form {
+
+  .submit-lie__field { // needs namespace
+    padding: 5px; // make responsive & style
+  }
+
+  p {
+    text-align: right;
+    font-size: 1em;
+    margin-top: 5px;  // make resposive
+    color: #919191;
+  }
+
+  .js-submit-modal__form__btn-submit {
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+/* Feedback Modal */
+.js-feedback-modal__content {
+
+}
+
+/* Explanation Modals */
+
+.reasons {
+    overflow-y: auto;
+    height: 405px / 465px * 100%;
+    width: 524px / 642px * 100%;
+    margin: 0 auto;
+    padding: 0 (20px / 524px * 100%); 
+  
+    /* width of quotes should be on blockquote not reasons */
+    blockquote {
+      @extend p;
+      margin-bottom: 46px / 337px * 100%;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+}
+
+
+/* MAIN */
+
+.wrapper {
+  position: relative;
+}
+
+main {
+  width: 658px / 1024px * 100%;
+  height: 425px / 710px * 100%;
+  margin: 0 auto;
+  text-align: center;
+  padding-bottom: 15.727391874181%; /* height of footer */
+
+  p a {
+    font-style: italic;
+    color: $font-color;
+  }
+
+  .modal-true a {
+    color: #BBBBBB;
+    text-decoration: none;
+
+    &:hover {
+      border-bottom: 1px solid #BBBBBB;
+    }
+  }
+}
+
+/* Welcome Page */
+.pg-home {
+  display: none;
+}
+
+/* Lie Page */
+.pg-lie {
+  margin-top: 83px / 463px * 100%;
+  width: 100%;
+  height: 282px / 463px * 100%;
+  display: block;
+}
+
+.lie {
+  margin-bottom: 52px / 463px * 100%;
+  width: 100%;
+  height: 100%;
+  display: table;
+
+  h6 {
+    display: table-cell;
+    vertical-align: middle;
+  }
+}
+
+.choose {
+  width: 100%; /* 842px / 658px */
+  //height: /* 70px / .pg-lie */
+
+  .btn-white-lie {
+    float: left;
+  }
+
+  .btn-lie {
+    float: right;
+  }
+}
+
+
+/* Result Page */ 
+.pg-result {
+  display: none; // temp
+}
+
+.result {
+  margin-bottom: 37px / 658px * 100%;
+  padding-top: 17.188034%; 
+}
+
+.continue {
+  margin-top: 54px / 658px * 100%; 
+  margin-bottom: 25px / 566px * 100%; 
+}
+
+
+/* FOOTER */
+footer {
+  width: 984px / 1024px * 100%;
+  height: 120px / 763px * 100%;
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  line-height: 750%; 
+  white-space: nowrap;
+  overflow: hidden;
+
+  p {
+    color: #919191; 
+    position: relative;
+    bottom: 26px / 120px * 100%;
+    text-align: left;
+  }
+}
